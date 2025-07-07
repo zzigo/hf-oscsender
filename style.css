@@ -42,9 +42,18 @@ h1 {
   text-align: center;
 }
 
+#hud-toggle {
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  z-index: 11;
+  background: none;
+}
+
 .logo {
-  height: 6em;
-  padding: 1.5em;
+  height: 0.5em;
+  padding: 1em;
+  bottom: 0px;
   will-change: filter;
   transition: filter 300ms;
 }
@@ -80,6 +89,39 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+#bottom-bar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 54px;
+  background: rgba(0,0,0,0.18);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 20;
+  padding: 0 18px;
+}
+
+.logo {
+  width: 75px; /* 30% smaller than before */
+  height: auto;
+  opacity: 0.6;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+#osc-led {
+  margin-left: auto;
+  margin-right: 0;
+  align-self: center;
+  .hud-logo {
+    width: 72px;
+    left: 10px;
+    bottom: 60px;
+  }
 }
 
 @media (prefers-color-scheme: light) {

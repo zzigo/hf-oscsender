@@ -17,14 +17,14 @@ app.innerHTML = `
         <input id="ip-input" type="text" pattern="^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$" placeholder="IP address (e.g. 192.168.1.2)" maxlength="15" />
         <input id="port-input" type="number" min="1" max="65535" placeholder="Port" maxlength="5" />
         <button id="connect-btn">Connect</button>
-      </div>
-        <img src="/ui-logo-50.svg" class="hud-logo" alt="logo" />
     </div>
   </div>
-  <div id="threejs-canvas"></div>
-  <div id="bottom-bar">
-    <span id="osc-led" class="led" title="OSC"></span>
   </div>
+    <div id="threejs-canvas"></div>
+  <div id="bottom-bar">
+  <img src="/ui-logo-50.svg" class="logo" alt="logo" />
+  <span id="osc-led" class="led" title="OSC"></span>
+</div>
 `;
 
 // --- HUD FOLDING ---
