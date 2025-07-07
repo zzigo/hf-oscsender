@@ -63,6 +63,18 @@ h1 {
   color: #888;
 }
 
+.bottom-logo {
+  position: fixed;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 38px;
+  opacity: 0.5;
+  z-index: 21;
+  pointer-events: none;
+  padding: 0;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;

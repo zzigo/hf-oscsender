@@ -104,7 +104,9 @@ function validateIP(ip) {
 function connectOSC(ip, port) {
   if (!validateIP(ip) || !port) return;
   if (osc) osc.close();
-  osc = new OSC({ plugin: new OSC.DatagramPlugin({ send: { host: ip, port: Number(port) }, open: { host: '0.0.0.0', port: 0 } }) });
+  // Use WebSocketClientPlugin for browser
+  const wsUrl = `ws://${ip}:${port}`;
+  osc = new OSC({ plugin: new OSC.WebsocketClientPlugin(wsUrl) });
   osc.on('open', () => { oscConnected = true; setLed(true); });
   osc.on('close', () => { oscConnected = false; setLed(false); });
   osc.open();
